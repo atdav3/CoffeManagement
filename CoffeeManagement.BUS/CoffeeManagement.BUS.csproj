@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58F48AA8-A5B6-436B-8E9C-9F53A2A56E2D}</ProjectGuid><OutputType>Library</OutputType><RootNamespace>CoffeeManagement.BUS</RootNamespace><AssemblyName>CoffeeManagement.BUS</AssemblyName><TargetFrameworkVersion>v4.8</TargetFrameworkVersion><FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>bin\Debug\</OutputPath><DefineConstants>DEBUG;TRACE</DefineConstants><WarningLevel>4</WarningLevel></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' "><DebugType>pdbonly</DebugType><Optimize>true</Optimize><OutputPath>bin\Release\</OutputPath><DefineConstants>TRACE</DefineConstants><WarningLevel>4</WarningLevel></PropertyGroup>
+  <ItemGroup><Reference Include="System" /><Reference Include="System.Core" /><Reference Include="System.Data" /></ItemGroup>
+  <ItemGroup><Compile Include="Services\BusinessLayerMarker.cs" /><Compile Include="Services\AuditService.cs" /><Compile Include="Services\BusinessCalendarService.cs" /><Compile Include="Services\PasswordHasher.cs" /><Compile Include="Services\AuthenticationService.cs" /><Compile Include="Services\DatabaseConnectionService.cs" /><Compile Include="Services\CatalogService.cs" /><Compile Include="Services\OrderService.cs" /><Compile Include="Services\DashboardService.cs" /><Compile Include="Services\ReportService.cs" /><Compile Include="Exceptions\BusinessException.cs" /><Compile Include="Exceptions\DatabaseConnectionException.cs" /><Compile Include="Properties\AssemblyInfo.cs" /></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoffeeManagement.DAL\CoffeeManagement.DAL.csproj"><Project>{D14950D5-5969-4CA6-A7A1-2A14B18BC509}</Project><Name>CoffeeManagement.DAL</Name></ProjectReference>
+    <ProjectReference Include="..\CoffeeManagement.DTO\CoffeeManagement.DTO.csproj"><Project>{1318661F-FA16-4A25-8E63-5AA8FC7D9A44}</Project><Name>CoffeeManagement.DTO</Name></ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1318661F-FA16-4A25-8E63-5AA8FC7D9A44}</ProjectGuid><OutputType>Library</OutputType><RootNamespace>CoffeeManagement.DTO</RootNamespace><AssemblyName>CoffeeManagement.DTO</AssemblyName><TargetFrameworkVersion>v4.8</TargetFrameworkVersion><FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>bin\Debug\</OutputPath><DefineConstants>DEBUG;TRACE</DefineConstants><WarningLevel>4</WarningLevel></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' "><DebugType>pdbonly</DebugType><Optimize>true</Optimize><OutputPath>bin\Release\</OutputPath><DefineConstants>TRACE</DefineConstants><WarningLevel>4</WarningLevel></PropertyGroup>
+  <ItemGroup><Reference Include="System" /><Reference Include="System.Core" /></ItemGroup>
+  <ItemGroup><Compile Include="Entities\ProjectInfo.cs" /><Compile Include="Entities\DatabaseConnectionResultDto.cs" /><Compile Include="Entities\CategoryDto.cs" /><Compile Include="Entities\ProductDto.cs" /><Compile Include="Entities\UserSessionDto.cs" /><Compile Include="Entities\OrderLineDto.cs" /><Compile Include="Entities\OrderSplitLineDto.cs" /><Compile Include="Entities\OrderDto.cs" /><Compile Include="Entities\EmployeeDto.cs" /><Compile Include="Entities\CafeTableDto.cs" /><Compile Include="Entities\IngredientDto.cs" /><Compile Include="Entities\PromotionDto.cs" /><Compile Include="Entities\UnitDto.cs" /><Compile Include="Enums\ReportKind.cs" /><Compile Include="Properties\AssemblyInfo.cs" /></ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
